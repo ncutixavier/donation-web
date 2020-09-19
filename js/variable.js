@@ -8,6 +8,9 @@ const slideBtn = document.querySelector('.slide_btn')
 const slideLeft = document.querySelector('.slide_left_btn')
 const slideRight = document.querySelector('.slide_right_btn')
 
+const causeItems = document.querySelector('.causes-items')
+const sponsorItems = document.querySelector('.sponsors-items')
+
 window.addEventListener('scroll', function () {
     scroll.textContent = window.pageYOffset + 'px';
 });
