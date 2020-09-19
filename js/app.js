@@ -50,6 +50,6 @@ function showSlide() {
     if (slideIndex > slides.length) { slideIndex = 1 }
 
     slides[slideIndex - 1].style.display = "flex";
-    setTimeout(showSlide, 5000);
+    setTimeout(showSlide, 15000);
 }
 // ******************************************************

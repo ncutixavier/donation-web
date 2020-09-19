@@ -10,12 +10,18 @@
   --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
 }
 
+.pd{
+  padding: 5% 6% 5%;
+}
+
 html {
+  scroll-behavior: smooth;
   font-size: 10px;
 }
 
 body {
   font-family: "Open Sans";
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -58,8 +64,9 @@ body {
   width: 100%;
   border-top: 0.5rem solid #000;
   z-index: 100;
-  padding: 1rem 0;
+  padding: .8rem 0;
   background-color: #fff;
+  box-shadow: var(--box-shadow);
 }
 
 .logo {
@@ -71,8 +78,8 @@ body {
 }
 
 .logo span {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 .logo span img {
@@ -91,7 +98,8 @@ body {
   padding: 1rem 2rem;
   margin: 0 0.8rem;
   color: black;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -100,86 +108,101 @@ body {
   border-bottom: 3px solid #000;
 }
 
-.navbar-items span:nth-child(4) {
+.navbar-items span:nth-child(5) {
   background-color: var(--primary-color);
   border-bottom: 3px solid #000;
   padding: 1rem 0;
 }
 
-.navbar-items span:nth-child(4) a {
+.navbar-items span:nth-child(5) a {
   color: #fff;
 }
 
-.navbar-items span:nth-child(4) a:hover {
+.navbar-items span:nth-child(5) a:hover {
   background-color: transparent;
 }
 /* ************************************************* */
 /* *******************slideshow********************* */
 .slideshow {
-  margin-top: 7.5%;
+  margin-top: 5%;
 }
 
-.slide,
-.slide_1 {
+.slide{
   height: 85vh;
   background-size: cover;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .sliding {
   display: flex;
 }
 
-.slide_1 {
-  background-image: url(../img/slides/hope-2.jpg);
-  transition: all 5s ease-in-out;
-}
-.slide_2 {
-  background-image: url(../img/slides/hope-3.jpg);
-}
-.slide_3 {
-  background-image: url(../img/slides/hope-6.jpg);
+.slide_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.slide_content {
-  margin-left: 10%;
-  animation: leftToRight 3s ease-in-out;
+.slide_1 {
+  transition: all 5s ease-in-out;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+                  url(../img/slides/hope-2.jpg);
+}
+.slide_2 {
+  display: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
+                  url(../img/slides/hope-3.jpg);
+}
+.slide_3 {
+  display: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
+                  url(../img/slides/hope-6.jpg);
 }
 
 .slide_main_title {
   background-color: var(--primary-color);
   padding: 1rem;
   font-size: 2rem;
-  width: 40%;
   margin: 0.5rem 0 1.5rem;
+  width: 50%;
+  text-align: center;
 }
 
 .slide_main_content {
   font-size: 1.5rem;
-  width: 40%;
   color: #fff;
   margin: 0.5rem 0 2rem;
   line-height: 1.5;
+  width: 40%;
+  font-weight: bold;
+  text-align: center;
 }
 
 .left {
-  animation: leftToRight 3s ease-in-out;
+  animation: leftToRight 5s ease-in-out;
 }
 
 .right {
-  animation: rightToLeft 3s ease-in-out;
+  animation: rightToLeft 5s ease-in-out;
+}
+
+.slide_main_btn{
+  display: flex;
 }
 
 .details-btn {
   background-color: #000;
-  padding: 1rem 1.3rem;
+  padding: 1rem 1.5rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  margin: 0 1rem;
 }
 
 .donate-btn {
@@ -189,6 +212,10 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.5rem;
+}
+
+.donate-btn:hover, .details-btn:hover{
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .slide_btn {
@@ -217,20 +244,22 @@ body {
 
 @keyframes rightToLeft {
   from {
-    transform: translate(10rem);
+    transform: translate(12rem);
+    opacity: .2;
   }
   to {
-    transform: translate(0);
+    transform: translate(0rem);
+    opacity: 1;
   }
 }
 
 @keyframes leftToRight {
   from {
-    margin-left: 0;
+    transform: translate(-12rem);
     opacity: .2;
   }
   to {
-    margin-left: 10%;
+    transform: translate(0);
     opacity: 1;
   }
 }
@@ -238,8 +267,6 @@ body {
 
 .causes {
   background-image: url(../img/back-2.jpg);
-  height: 100vh;
-  padding: 2% 6%;
 }
 
 .title {
@@ -248,6 +275,9 @@ body {
   background-position: center;
   margin: 4rem 0;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title h1 {
@@ -257,5 +287,204 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   text-align: center;
-  display: inline-block;
+}
+
+.causes-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cause{
+  width: 22%;
+  margin: 1rem 0 2rem;
+}
+
+.cause-img{
+  width: 100%;
+  height: 15rem;
+}
+
+.cause-title h3 {
+  background-color: var(--primary-color);
+  font-size: 1.8rem;
+  margin: -0;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.cause-btn{
+  background-color: #000;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.cause-btn:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-weight: bold;
+  /* border-bottom: 2px solid #000; */
+}
+/* ***************************************************** */
+
+.title-dark {
+  background-image: url(../img/line.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  margin: 4rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-dark h1 {
+  background-color: #000;
+  color: var(--primary-color);
+  padding: .8rem 6rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.sponsors-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* .sponsors-items img{
+  animation: slideToRight 7s infinite linear;
+} */
+
+/* .sponsors-items:nth-last-child(even){
+  animation: slideToRight 15s linear infinite;
+}
+
+.sponsors-items:nth-last-child(odd){
+  animation: slideToRight 12s linear infinite;
+} */
+
+.sponsor{
+  width: 25rem;
+  height: 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes slideToRight {
+  100% {
+    transform: translateX(1rem);
+  }
+}
+/* ****************************************** */
+.contact{
+  background-color: var(--primary-color);
+}
+
+.social-media{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.icons i{
+  font-size: 3.5rem;
+  margin: 0 1rem;
+}
+
+.icons i:hover{
+  color: #fff;
+}
+
+.contact-items{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 5%;
+}
+
+.contact-add{
+  grid-column: 1/2;
+}
+
+.contact-add-item{
+  margin-bottom: 3rem;
+}
+
+.contact-add-title{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.contact-add-sub-title{
+  font-size: 1.8rem;
+}
+
+.contact-fom{
+  grid-column: 2/3;
+}
+
+.contact-form-input{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.contact-form-input label{
+  font-size: 1.8rem;
+  line-height: 2;
+}
+
+.contact-form-input input, .contact-form-input textarea{
+  font-size: 1.8rem;
+  padding: 1rem;
+  font-family: 'Open Sans';
+  outline: none;
+}
+
+.contact-form-input input[type=button]{
+  background-color: #000;
+  width: 30%;
+  outline: none;
+  color: #fff;
+  border: none;
+}
+
+input[type=button]:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.footer{
+  background-color: #000;
+  color: #fff;
+  padding: 5% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-nav a{
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.footer-nav a:hover{
+  color: #fff;
+}
+
+.footer-cop{
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }
