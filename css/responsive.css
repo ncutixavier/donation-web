@@ -83,6 +83,18 @@
       padding: 0;
   }
 
+  .causes-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .cause {
+    width: 100%;
+    margin: 1rem 0 2rem;
+  }
+
   .slide_btn i{
       font-size: 3rem;
   }
