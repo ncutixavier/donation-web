@@ -1,0 +1,164 @@
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 8px;
+  }
+  .contact-items {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .pd {
+    padding: 7% 6% 5%;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    padding: 0 5%;
+  }
+
+  .bars {
+    display: flex;
+    font-size: 3rem;
+  }
+
+  .navbar-items {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: none;
+    flex-direction: column;
+  }
+
+  .active {
+    display: flex;
+    transition: all 5s ease-in-out;
+  }
+
+  .navbar-items a {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+
+  .navbar-items a:nth-child(5) {
+    background-color: transparent;
+    border-bottom: none;
+    color: #000;
+  }
+
+  .cause {
+    width: 45%;
+    margin: 1rem 0 2rem;
+  }
+
+  .slide_main_title {
+    font-size: 1.8rem;
+    width: 60%;
+    margin-bottom: 2.3rem;
+  }
+
+  .slide_main_content {
+    width: 50%;
+    margin-bottom: 2.3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .pd {
+    padding: 12% 6% 5%;
+  }
+
+  .slide_btn{
+      padding: 0;
+  }
+
+  .slide_btn i{
+      font-size: 3rem;
+  }
+
+  .slide_main_title {
+    font-size: 1.8rem;
+    width: 70%;
+  }
+
+  .slide_main_content {
+    width: 70%;
+  }
+
+  .contact-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 8%;
+  }
+
+  .contact-add {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .contact-fom {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 4rem;
+    padding: 0 8%;
+  }
+
+  .title h1,
+  .title-dark h1 {
+    font-size: 2rem;
+    padding: 0.8rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .slide_main_title {
+    font-size: 1.5rem;
+    width: 80%;
+    margin-bottom: 2.3rem;
+  }
+
+  .slide_main_content {
+    width: 80%;
+    margin-bottom: 2.3rem;
+  }
+
+  .causes-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .cause {
+    width: 100%;
+    margin: 1rem 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .sponsors-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sponsor {
+    margin: 1rem 0;
+  }
+}
