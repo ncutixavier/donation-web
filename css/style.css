@@ -488,7 +488,7 @@ input[type="button"]:hover {
 }
 /* ************************************************** */
 .about {
-  padding: 10% 20%;
+  padding: 10% 20% 5%;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
