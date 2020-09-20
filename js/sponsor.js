@@ -14,18 +14,16 @@ const sponsors = [
     {
         id:4,
         img:'4.png'
-    },
-    {
-        id:5,
-        img:'5.png'
     }
 ]
 
 const renderSponsors = doc =>{
     let sponsor = document.createElement('div')
     sponsor.setAttribute('class','sponsor')
-    sponsor.setAttribute('style', `background-image: url(/img/sponsors/${doc.img});`)
+    let image = document.createElement('img')
+    image.src = `/img/sponsors/${doc.img}`
 
+    sponsor.appendChild(image)
     sponsorItems.appendChild(sponsor)
 }
 

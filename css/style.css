@@ -10,7 +10,7 @@
   --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
 }
 
-.pd{
+.pd {
   padding: 5% 6% 5%;
 }
 
@@ -64,7 +64,7 @@ body {
   width: 100%;
   border-top: 0.5rem solid #000;
   z-index: 100;
-  padding: .8rem 0;
+  padding: 0.8rem 0;
   background-color: #fff;
   box-shadow: var(--box-shadow);
 }
@@ -73,16 +73,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: center;
   grid-column: 1/2;
-  animation: rightToLeft 3s ease-in-out;
 }
 
-.logo span {
+.bars {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo div {
   width: 6rem;
   height: 6rem;
 }
 
-.logo span img {
+.logo div img {
   width: 100%;
   height: 100%;
 }
@@ -94,8 +100,7 @@ body {
   align-items: center;
 }
 
-.navbar-items span a {
-  padding: 1rem 2rem;
+.navbar-items a {
   margin: 0 0.8rem;
   color: black;
   font-size: 1.5rem;
@@ -103,18 +108,22 @@ body {
   text-decoration: none;
 }
 
-.navbar-items span a:hover {
+.navbar-items a span {
+  padding: 1rem 2rem;
+}
+
+.navbar-items a span:hover {
   background-color: var(--primary-hover-color);
   border-bottom: 3px solid #000;
 }
 
-.navbar-items span:nth-child(5) {
+.navbar-items a:nth-child(5) {
   background-color: var(--primary-color);
   border-bottom: 3px solid #000;
   padding: 1rem 0;
 }
 
-.navbar-items span:nth-child(5) a {
+.navbar-items a:nth-child(5){
   color: #fff;
 }
 
@@ -127,9 +136,10 @@ body {
   margin-top: 5%;
 }
 
-.slide{
+.slide {
   height: 85vh;
   background-size: cover;
+  background-position: center center;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -140,7 +150,7 @@ body {
   display: flex;
 }
 
-.slide_content{
+.slide_content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,17 +160,17 @@ body {
 .slide_1 {
   transition: all 5s ease-in-out;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-                  url(../img/slides/hope-2.jpg);
+    url(../img/slides/hope-2.jpg);
 }
 .slide_2 {
   display: none;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
-                  url(../img/slides/hope-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url(../img/slides/hope-3.jpg);
 }
 .slide_3 {
   display: none;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
-                  url(../img/slides/hope-6.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url(../img/slides/hope-6.jpg);
 }
 
 .slide_main_title {
@@ -190,7 +200,7 @@ body {
   animation: rightToLeft 5s ease-in-out;
 }
 
-.slide_main_btn{
+.slide_main_btn {
   display: flex;
 }
 
@@ -214,7 +224,8 @@ body {
   font-size: 1.5rem;
 }
 
-.donate-btn:hover, .details-btn:hover{
+.donate-btn:hover,
+.details-btn:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -226,12 +237,12 @@ body {
   left: 0;
   width: 100%;
   padding: 0 2rem;
-  transition: all .5s;
-  opacity: .3;
-  transition: all .5s;
+  transition: all 0.5s;
+  opacity: 0.3;
+  transition: all 0.5s;
 }
 
-.slide_btn:hover{
+.slide_btn:hover {
   opacity: 1;
 }
 
@@ -245,7 +256,7 @@ body {
 @keyframes rightToLeft {
   from {
     transform: translate(12rem);
-    opacity: .2;
+    opacity: 0.2;
   }
   to {
     transform: translate(0rem);
@@ -256,7 +267,7 @@ body {
 @keyframes leftToRight {
   from {
     transform: translate(-12rem);
-    opacity: .2;
+    opacity: 0.2;
   }
   to {
     transform: translate(0);
@@ -283,7 +294,7 @@ body {
 .title h1 {
   background-color: var(--primary-color);
   color: #fff;
-  padding: .8rem 6rem;
+  padding: 0.8rem 6rem;
   font-size: 2.5rem;
   text-transform: uppercase;
   text-align: center;
@@ -296,12 +307,14 @@ body {
   width: 100%;
 }
 
-.cause{
+.cause {
   width: 22%;
   margin: 1rem 0 2rem;
 }
 
-.cause-img{
+.cause-img {
+  background-position: center;
+  background-size: cover;
   width: 100%;
   height: 15rem;
 }
@@ -314,7 +327,7 @@ body {
   text-align: center;
 }
 
-.cause-btn{
+.cause-btn {
   background-color: #000;
   padding: 1rem;
   display: flex;
@@ -324,7 +337,7 @@ body {
   font-size: 1.5rem;
 }
 
-.cause-btn:hover{
+.cause-btn:hover {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   font-weight: bold;
@@ -346,17 +359,18 @@ body {
 .title-dark h1 {
   background-color: #000;
   color: var(--primary-color);
-  padding: .8rem 6rem;
+  padding: 0.8rem 6rem;
   font-size: 2.5rem;
   text-transform: uppercase;
   text-align: center;
   border-bottom: 3px solid var(--primary-color);
 }
 
-.sponsors-items{
+.sponsors-items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -374,11 +388,9 @@ body {
   animation: slideToRight 12s linear infinite;
 } */
 
-.sponsor{
-  width: 25rem;
-  height: 8rem;
-  background-repeat: no-repeat;
-  background-position: center;
+.sponsor {
+  /* width: 20%;
+  height: 8rem; */
 }
 
 @keyframes slideToRight {
@@ -387,73 +399,74 @@ body {
   }
 }
 /* ****************************************** */
-.contact{
+.contact {
   background-color: var(--primary-color);
 }
 
-.social-media{
+.social-media {
   display: flex;
   justify-content: center;
   margin-bottom: 4rem;
 }
 
-.icons i{
+.icons i {
   font-size: 3.5rem;
   margin: 0 1rem;
 }
 
-.icons i:hover{
+.icons i:hover {
   color: #fff;
 }
 
-.contact-items{
+.contact-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 5%;
 }
 
-.contact-add{
+.contact-add {
   grid-column: 1/2;
 }
 
-.contact-add-item{
+.contact-add-item {
   margin-bottom: 3rem;
 }
 
-.contact-add-title{
+.contact-add-title {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: bold;
   line-height: 2;
 }
 
-.contact-add-sub-title{
+.contact-add-sub-title {
   font-size: 1.8rem;
 }
 
-.contact-fom{
+.contact-fom {
   grid-column: 2/3;
 }
 
-.contact-form-input{
+.contact-form-input {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
 }
 
-.contact-form-input label{
+.contact-form-input label {
   font-size: 1.8rem;
   line-height: 2;
 }
 
-.contact-form-input input, .contact-form-input textarea{
+.contact-form-input input,
+.contact-form-input textarea {
   font-size: 1.8rem;
   padding: 1rem;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   outline: none;
 }
 
-.contact-form-input input[type=button]{
+.contact-form-input input[type="button"] {
   background-color: #000;
   width: 30%;
   outline: none;
@@ -461,11 +474,11 @@ body {
   border: none;
 }
 
-input[type=button]:hover{
+input[type="button"]:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.footer{
+.footer {
   background-color: #000;
   color: #fff;
   padding: 5% 0;
@@ -474,17 +487,17 @@ input[type=button]:hover{
   align-items: center;
 }
 
-.footer-nav a{
+.footer-nav a {
   text-decoration: none;
   color: var(--primary-color);
   font-size: 1.3rem;
 }
 
-.footer-nav a:hover{
+.footer-nav a:hover {
   color: #fff;
 }
 
-.footer-cop{
+.footer-cop {
   font-size: 1.5rem;
   padding: 1rem 0;
 }
