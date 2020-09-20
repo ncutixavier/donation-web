@@ -21,3 +21,16 @@ bar.addEventListener('click', ()=>{
     document.querySelector('.fa-bars').classList.toggle('fa-times')
     navItems.classList.toggle('active')
 })
+
+
+document.onkeydown = function (e) {
+    if (e.ctrlKey &&
+        (e.keyCode === 67 ||
+            e.keyCode === 86 ||
+            e.keyCode === 85 ||
+            e.keyCode === 117)) {
+        return false;
+    } else {
+        return true;
+    }
+};

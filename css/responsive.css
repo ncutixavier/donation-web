@@ -72,6 +72,14 @@
     width: 50%;
     margin-bottom: 2.3rem;
   }
+
+  .about {
+    padding: 10% 15%;
+  }
+
+  .about-header {
+    margin:5% 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -136,6 +144,15 @@
     font-size: 2rem;
     padding: 0.8rem 3rem;
   }
+
+  .about {
+    padding: 10% 10%;
+  }
+
+  .about-header {
+    margin:10% 0 5%;
+    font-size: 3rem;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -160,6 +177,15 @@
   .cause {
     width: 100%;
     margin: 1rem 0 2rem;
+  }
+
+  .about {
+    padding: 10% 6%;
+  }
+
+  .about-header {
+    margin:15% 0 5%;
+    font-size: 3rem;
   }
 }
 

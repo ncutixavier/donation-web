@@ -7,7 +7,7 @@
 :root {
   --primary-color: #00bfff;
   --primary-hover-color: #edeeee;
-  --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
+  --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .pd {
@@ -123,7 +123,7 @@ body {
   padding: 1rem 0;
 }
 
-.navbar-items a:nth-child(5){
+.navbar-items a:nth-child(5) {
   color: #fff;
 }
 
@@ -377,22 +377,6 @@ body {
   position: relative;
 }
 
-/* .sponsors-items img{
-  animation: slideToRight 7s infinite linear;
-} */
-
-/* .sponsors-items:nth-last-child(even){
-  animation: slideToRight 15s linear infinite;
-}
-
-.sponsors-items:nth-last-child(odd){
-  animation: slideToRight 12s linear infinite;
-} */
-
-.sponsor {
-  /* width: 20%;
-  height: 8rem; */
-}
 
 @keyframes slideToRight {
   100% {
@@ -502,3 +486,55 @@ input[type="button"]:hover {
   font-size: 1.5rem;
   padding: 1rem 0;
 }
+/* ************************************************** */
+.about {
+  padding: 10% 20%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.about-header {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 3%;
+}
+
+.about-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-item {
+  background-color: #fff;
+  width: 100%;
+  margin: 0 1% 3%;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 5%;
+}
+
+.about-item img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.about-item h2 {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.about-item p{
+  font-size: 1.3rem;
+  line-height: 2;
+  text-align: justify;
+}
+
+.list{
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+.about-item-one{
+  margin: 2% 0;
+}
+
