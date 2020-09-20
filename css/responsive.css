@@ -51,6 +51,20 @@
     padding: 1.5rem 0;
   }
 
+  .navbar-items a span {
+    border: none;
+  }
+
+  .navbar-items a:hover {
+    background-color: var(--primary-hover-color);
+    border-bottom: 1px solid #000;
+  }
+
+  .navbar-items a span:hover {
+    background-color: var(--primary-hover-color);
+    border: none;
+  }
+
   .navbar-items a:nth-child(5) {
     background-color: transparent;
     border-bottom: none;
@@ -74,11 +88,11 @@
   }
 
   .about {
-    padding: 10% 15%;
+    padding: 10% 15% 5%;
   }
 
   .about-header {
-    margin:5% 0;
+    margin: 5% 0;
   }
 }
 
@@ -87,8 +101,8 @@
     padding: 12% 6% 5%;
   }
 
-  .slide_btn{
-      padding: 0;
+  .slide_btn {
+    padding: 0;
   }
 
   .causes-items {
@@ -103,8 +117,8 @@
     margin: 1rem 0 2rem;
   }
 
-  .slide_btn i{
-      font-size: 3rem;
+  .slide_btn i {
+    font-size: 3rem;
   }
 
   .slide_main_title {
@@ -146,11 +160,11 @@
   }
 
   .about {
-    padding: 10% 10%;
+    padding: 10% 10% 5%;
   }
 
   .about-header {
-    margin:10% 0 5%;
+    margin: 10% 0 5%;
     font-size: 3rem;
   }
 }
@@ -180,11 +194,11 @@
   }
 
   .about {
-    padding: 10% 6%;
+    padding: 10% 6% 5%;
   }
 
   .about-header {
-    margin:15% 0 5%;
+    margin: 15% 0 5%;
     font-size: 3rem;
   }
 }
